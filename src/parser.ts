@@ -38,7 +38,7 @@ export function parseRequest(req: IncomingMessage) {
 }
 
 function getDefaultImages(images: string[], theme: Theme) {
-    if (images.length > 0 && images[0] && images[0].startsWith('https://assets.zeit.co/image/upload/front/assets/design/')) {
+    if (images.length > 0 && images[0]) {
         return images;
     }
     return theme === 'light'
